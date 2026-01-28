@@ -8,7 +8,7 @@
 ///
 /// It is typically produced by code generation and
 /// used internally by the runtime layer.
-abstract class Table<T> {
+class Table<T> {
   /// SQL definition used to create the table.
   ///
   /// Usually contains a CREATE TABLE statement
