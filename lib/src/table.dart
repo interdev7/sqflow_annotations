@@ -18,6 +18,9 @@ abstract class Table<T> {
   /// Name of the database table.
   final String name;
 
+  ///
+  final String primaryKey;
+
   /// Factory function that converts a database row
   /// into a strongly-typed entity instance.
   ///
@@ -35,6 +38,7 @@ abstract class Table<T> {
     required this.schema,
     required this.name,
     required this.fromJson,
+    this.primaryKey = 'id',
     this.paranoid = false,
   });
 }
