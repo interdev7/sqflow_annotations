@@ -1,3 +1,5 @@
+import 'package:sqflow_annotations/src/column_naming_strategy.dart';
+
 import 'data_types.dart';
 
 /// Base class for all column definitions.
@@ -97,10 +99,13 @@ class Schema {
   /// instead of being physically removed.
   final bool paranoid;
 
+  final ColumnNamingStrategy columnNaming;
+
   const Schema({
     this.tableName,
     this.indexes = const [],
     this.paranoid = false,
+    this.columnNaming = ColumnNamingStrategy.snakeCase,
   });
 }
 
